@@ -41,11 +41,11 @@ public class FundDAOImpl implements FundDAO {
 		try {
 			Connection con = ConnectionFactory.getConnection();
 			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("select * from fund where ACC_NO = '"+accountNumber+"'");
+			ResultSet rs = st.executeQuery("select * from fund where accountnumber = '"+accountNumber+"'");
 			boolean b = rs.next();
 			if(b == true) {
 				customer = new Fund();
-				customer.setAccountNumber(rs.getString("ACC_NO"));
+				customer.setAccountNumber(rs.getString("accountnumber"));
 				customer.setCustomerName(rs.getString("CUST_NAME"));
 				customer.setCustomerIfsc(rs.getString("CUST_IFSC"));
 				customer.setCustomerAddress(rs.getString("CUST_ADDR"));

@@ -1,0 +1,3 @@
+create table admin(accountNumber varchar2(20) ,customerName varchar2(20),customerIfsc varchar2(20),customerAddress varchar2(20),balance varchar2(20));
+create table beneficiary(beneficiaryNumber varchar2(20) ,beneficiaryName varchar2(20),accountNumber varchar2(20) ,beneficiaryIfsc varchar2(20),branchName varchar2(20));
+create table fund(accountnumber varchar2(20) ,cust_name varchar2(20),cust_ifsc varchar2(20),cust_addr varchar2(20),trans_amt varchar2(20));
